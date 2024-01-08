@@ -73,13 +73,33 @@ ENTRYPOINT ["dotnet", "AzureCosmosCRUDWebAPI.dll"]
 docker build -t mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1 .
 ```
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/d3cf3bae-4791-46ca-8ade-680c1d71cd7d)
+
 ## 5. Push the Docker image
+
+Log in to Azure ACR
+
+```
+az acr login --name mymicroservicecontainer
+```
+
+And we push the docker image to Azure ACR
 
 ```
 docker push mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1
 ```
 
-## 6. Run the container Docker image
+## 6. Verify the Docker image in Azure ACR
+
+We navigate to the Azure ACR
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/d01246fc-cb1d-4a6d-9353-dbb7145b3bbd)
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/6aa03f7a-7478-4db8-8550-c4e9afbe9772)
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/85f62764-9d7e-4653-9693-558fe1b15cfc)
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/baa97e05-c998-4433-8dd8-c0b9d271815b)
 
 ```
 docker run -p 80:8080 mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1
