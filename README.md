@@ -53,14 +53,32 @@ docker run -p 80:8080 mymicroservicecontainer.azurecr.io/mymicroservicecontainer
 
 ## 6. Create the Azure Container Instance (ACI) 
 
+We copy the ACR username and password:
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/2099d8be-1613-44fb-90d1-08ed846fe0b6)
+
+**ACR username**: mymicroservicecontainer
+ 
+**ACR password**: RtxdWayhsBSsrvs9ZEpG/cV+M9A1F7Xu5td9+S2lWp+ACRDRt6Dk
+
 ```
-az container create --resource-group myRG --name mycontainerinstance --image mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1 --cpu 1 --memory 1.5 --registry-login-server mymicroservicecontainer.azurecr.io --registry-username mymicroservicecontainer --registry-password pf/wdPCStBI7KLyQO8eGJvqzTm3QImHNFwXYjBzEVO+ACRAWicW2 --dns-name-label mymicroservicedns007 --ports 8080 --location westeurope
+az container create --resource-group myRG --name mycontainerinstance --image mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1 --cpu 1 --memory 1.5 --registry-login-server mymicroservicecontainer.azurecr.io --registry-username mymicroservicecontainer --registry-password RtxdWayhsBSsrvs9ZEpG/cV+M9A1F7Xu5td9+S2lWp+ACRDRt6Dk --dns-name-label mymicroservicedns007 --ports 8080 --location westeurope
 ```
 
 Also we can input the command in multiline
 
 ```
-
+az container create --resource-group myRG ^
+--name mycontainerinstance ^
+--image mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1 ^
+--cpu 1 ^
+--memory 1.5 ^
+--registry-login-server mymicroservicecontainer.azurecr.io ^
+--registry-username mymicroservicecontainer ^
+--registry-password RtxdWayhsBSsrvs9ZEpG/cV+M9A1F7Xu5td9+S2lWp+ACRDRt6Dk ^
+--dns-name-label mymicroservicedns007 ^
+--ports 8080 ^
+--location westeurope
 ```
 
 ## 7. 
