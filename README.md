@@ -101,9 +101,21 @@ We navigate to the Azure ACR
 
 ![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/baa97e05-c998-4433-8dd8-c0b9d271815b)
 
+We first pull the Azure Docker image to our local laptop with this command
+
+```
+docker pull mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1
+```
+
+And then we run the docker image
+
 ```
 docker run -p 80:8080 mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1
 ```
+
+We can access the application endpoint
+
+
 
 ## 7. Create the Azure Container Instance (ACI) 
 
