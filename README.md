@@ -12,7 +12,8 @@ We create Azure Container Registry service for uploading the .NET CRUD WebAPI do
 
 ![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/e0d0ab7e-ba80-4fd3-ba16-58913bc4b76e)
 
-![Uploading image.png…]()
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/bdccf3dc-114e-4758-bd1b-0c3996a91d9a)
+
 
 ## 2. 
 
