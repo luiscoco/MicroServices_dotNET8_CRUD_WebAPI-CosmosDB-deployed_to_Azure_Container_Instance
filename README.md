@@ -163,9 +163,10 @@ We copy the FQDN
 
 We input the Azure ACI endpoint in the internet web browser
 
+http://mymicroservicedns007.westeurope.azurecontainer.io:8080/api/Family
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/953a4f6f-0026-48cb-b643-834a709150a7)
 
-## 9. 
 
 
 
