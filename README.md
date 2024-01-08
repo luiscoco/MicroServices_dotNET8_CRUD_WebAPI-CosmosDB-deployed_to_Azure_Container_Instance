@@ -1,5 +1,11 @@
 # How to deploy Azure Container Instance (ACI) a .NET8 CRUD WebAPI Azure CosmosDB Microservice
 
+## 0. Prerequisite create .NET8 CRUD WebAPI connected to Azure CosmosDB
+
+See the code in this repo: https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance
+
+Also see this repo: https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB
+
 ## 1. Create an Azure Container Registry
 
 We create Azure Container Registry service for uploading the .NET CRUD WebAPI docker image
