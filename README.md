@@ -2,18 +2,13 @@
 
 ## 1. Create an Azure Container Registry
 
-We create a Container Registry service
+We create Azure Container Registry service for uploading the .NET CRUD WebAPI docker image
 
-![image](https://github.com/luiscoco/Azure_ACR_Upload_.NET_8_Web_API/assets/32194879/16399ba3-d529-4862-99ef-71713d08d594)
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/38684cb4-6405-4516-a2d5-8c2b5fd9dddb)
 
-![image](https://github.com/luiscoco/Azure_ACR_Upload_.NET_8_Web_API/assets/32194879/3691d9c5-850c-4305-9de5-38fda83a8372)
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/a34a5018-1a6f-4dec-8182-5a763be38da0)
 
-![image](https://github.com/luiscoco/Azure_ACR_Upload_.NET_8_Web_API/assets/32194879/be13a2f2-7f66-43db-b30a-d2c6c9d14a4e)
-
-![image](https://github.com/luiscoco/Azure_ACR_Upload_.NET_8_Web_API/assets/32194879/9fbbc617-f846-4c2d-b26d-5a813ed85e9a)
-
-![image](https://github.com/luiscoco/Azure_ACR_Upload_.NET_8_Web_API/assets/32194879/30b1e0a2-ccea-4ef6-98ec-c93e3a69d0e3)
-
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/e1604cbc-3bb6-43ea-b210-d6c6034c6f31)
 
 ## 2. 
 
