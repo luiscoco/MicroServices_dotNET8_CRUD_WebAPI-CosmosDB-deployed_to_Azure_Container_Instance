@@ -115,7 +115,9 @@ docker run -p 80:8080 mymicroservicecontainer.azurecr.io/mymicroservicecontainer
 
 We can access the application endpoint
 
+http://localhost/api/family
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/0e4a5204-7780-4e0d-b755-b225b86ab540)
 
 ## 7. Create the Azure Container Instance (ACI) 
 
