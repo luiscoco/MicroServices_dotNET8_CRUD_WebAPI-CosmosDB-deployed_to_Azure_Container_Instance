@@ -14,7 +14,6 @@ We create Azure Container Registry service for uploading the .NET CRUD WebAPI do
 
 ![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/bdccf3dc-114e-4758-bd1b-0c3996a91d9a)
 
-
 ## 2. Set the Admin User
 
 We can enable the Admin User in the Azure Portal 
@@ -33,25 +32,60 @@ Log in to Azure ACR
 az acr login --name mymicroservicecontainer
 ```
 
-## 3. Create the Docker image
+## 3. Create a Dockerfile
+
+With Visual Studio 2022 Community Edition we can automatically create the Dockerfile. 
+
+After creating automatically the Dockerfile we **expose the port 80**
+
+This is the Dockerfile source code
+
+```
+#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER app
+WORKDIR /app
+EXPOSE 80
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
+WORKDIR /src
+COPY ["AzureCosmosCRUDWebAPI.csproj", "."]
+RUN dotnet restore "./././AzureCosmosCRUDWebAPI.csproj"
+COPY . .
+WORKDIR "/src/."
+RUN dotnet build "./AzureCosmosCRUDWebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./AzureCosmosCRUDWebAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "AzureCosmosCRUDWebAPI.dll"]
+```
+
+## 4. Create the Docker image
 
 ```
 docker build -t mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1 .
 ```
 
-## 4. Push the Docker image
+## 5. Push the Docker image
 
 ```
 docker push mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1
 ```
 
-## 5. Run the container Docker image
+## 6. Run the container Docker image
 
 ```
 docker run -p 80:8080 mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1
 ```
 
-## 6. Create the Azure Container Instance (ACI) 
+## 7. Create the Azure Container Instance (ACI) 
 
 We copy the ACR username and password:
 
@@ -81,11 +115,11 @@ az container create --resource-group myRG ^
 --location westeurope
 ```
 
-## 7. 
-
-
-
 ## 8. 
+
+
+
+## 9. 
 
 
 
