@@ -27,19 +27,43 @@ Or we can enable the Admin User programmatically with Azure CLI
 az acr update --name mymicroservicecontainer --resource-group myRG --admin-enabled true
 ```
 
+Log in to Azure ACR
 
-
+```
 az acr login --name mymicroservicecontainer
+```
 
+## 3. Create the Docker image
+
+```
 docker build -t mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1 .
+```
 
+## 4. Push the Docker image
+
+```
 docker push mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1
+```
 
+## 5. Run the container Docker image
+
+```
 docker run -p 80:8080 mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1
+```
 
+## 6. Create the Azure Container Instance (ACI) 
+
+```
 az container create --resource-group myRG --name mycontainerinstance --image mymicroservicecontainer.azurecr.io/mymicroservicecontainer:v1 --cpu 1 --memory 1.5 --registry-login-server mymicroservicecontainer.azurecr.io --registry-username mymicroservicecontainer --registry-password pf/wdPCStBI7KLyQO8eGJvqzTm3QImHNFwXYjBzEVO+ACRAWicW2 --dns-name-label mymicroservicedns007 --ports 8080 --location westeurope
+```
 
-## 3. 
+Also we can input the command in multiline
+
+```
+
+```
+
+## 7. 
 
 
 
