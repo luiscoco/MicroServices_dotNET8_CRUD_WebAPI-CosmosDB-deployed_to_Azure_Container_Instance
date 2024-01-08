@@ -1,4 +1,4 @@
-# How to deploy Azure Container Instance (ACI) a .NET8 CRUD WebAPI Azure CosmosDB Microservice
+# How to deploy .NET8 CRUD WebAPI Azure CosmosDB Microservice to Azure Container Instance (ACI)
 
 ## 0. Prerequisite create .NET8 CRUD WebAPI connected to Azure CosmosDB
 
