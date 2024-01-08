@@ -15,9 +15,19 @@ We create Azure Container Registry service for uploading the .NET CRUD WebAPI do
 ![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/bdccf3dc-114e-4758-bd1b-0c3996a91d9a)
 
 
-## 2. 
+## 2. Set the Admin User
 
+We can enable the Admin User in the Azure Portal 
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/3690cdf3-d6b3-4003-9716-6cbf0eee4a87)
+
+Or we can enable the Admin User programmatically with Azure CLI
+
+```
 az acr update --name mymicroservicecontainer --resource-group myRG --admin-enabled true
+```
+
+
 
 az acr login --name mymicroservicecontainer
 
