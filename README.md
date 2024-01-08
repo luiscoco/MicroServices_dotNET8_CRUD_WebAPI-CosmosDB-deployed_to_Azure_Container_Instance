@@ -149,7 +149,19 @@ az container create --resource-group myRG ^
 --location westeurope
 ```
 
-## 8. 
+## 8. Verify the application running in the Azure Container Instance (ACI)
+
+We navigate to the Azure ACI service
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/97d61999-ce3f-4eb4-af4b-e9f66a9fa2a1)
+
+We press in the Azure ACI link
+
+We copy the FQDN
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-CosmosDB-deployed_to_Azure_Container_Instance/assets/32194879/11223a06-d895-4c8b-aa59-2f0c80c21266)
+
+We input the Azure ACI endpoint in the internet web browser
 
 
 
